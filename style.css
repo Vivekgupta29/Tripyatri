@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --kenjofont: "Kenjo I";
+  --poppinsfont: "Poppins", sans-serif;
+  --latofont: "Lato", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,4 +16,83 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 15vh;
+  width: 100%;
+  background-color: orange;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10vw;
+}
+
+#nav > #navlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 20%;
+  background-color: red;
+}
+
+#nav > #navlogo > #sitename {
+  text-transform: uppercase;
+  font-family: var(--kenjofont);
+  font-size: 2vw;
+  color: #fff;
+}
+
+#nav > #navlinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  width: 49%;
+  background-color: purple;
+}
+
+#nav > #navlinks > a {
+  font-family: var(--latofont);
+  text-decoration: none;
+  color: #fff;
+  font-size: 1vw;
+}
+
+#nav > #navbuttons {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: pink;
+  gap: 3vw;
+}
+
+#nav > #navbuttons > #search > i {
+  color: #fff;
+}
+
+#nav > #navbuttons > #options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+}
+
+#nav > #navbuttons > #options > .optionslines {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+}
+
+#optionsline2 {
+  width: 20px !important;
 }
