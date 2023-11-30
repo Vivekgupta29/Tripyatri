@@ -185,6 +185,7 @@ body {
   color: #ffffff86;
   font-size: 3vw;
   font-weight: 100;
+  text-align: center;
 }
 
 #page2 > #page2text > h2 > span {
@@ -205,6 +206,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
+  box-shadow: 20px 20px 60px #00000051, inset -20px -20px 60px #000;
 }
 
 #page2 > #page2images > #page2image1 {
@@ -213,22 +215,23 @@ body {
   left: 15vw;
   height: 200px;
   width: 400px;
-  background-color: red;
-  border-radius: 10px;
+  /* background-color: red; */
 }
+
 #page2 > #page2images > #page2image2 {
   position: absolute;
   top: 25vh;
   right: 15vw;
   height: 200px;
   width: 400px;
-  background-color: red;
+  /* background-color: red; */
 }
+
 #page2 > #page2images > #page2image3 {
   position: absolute;
-  bottom: 5vh;
-  left: 45vw;
+  bottom: 2vh;
+  left: 43vw;
   height: 250px;
-  width: 175px;
-  background-color: red;
+  width: 300px;
+  /* background-color: red; */
 }
