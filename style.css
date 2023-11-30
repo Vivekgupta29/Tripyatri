@@ -5,6 +5,7 @@
   --poppinsfont: "Poppins", sans-serif;
   --latofont: "Lato", sans-serif;
   --apnagreen: #27342e;
+  --page3white: #ece8e5;
 }
 
 * {
@@ -44,6 +45,20 @@ body {
   width: 20%;
 }
 
+#nav > #navlogo > #sitelogo {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#nav > #navlogo > #sitelogo > img {
+  width: 50px;
+  height: 50px;
+}
+
 #nav > #navlogo > #sitename {
   text-transform: uppercase;
   font-family: var(--kenjofont);
@@ -79,6 +94,7 @@ body {
 #nav > #navbuttons > #search > svg {
   fill: #fff;
   height: 25px;
+  cursor: pointer;
 }
 
 #nav > #navbuttons > #options {
@@ -87,6 +103,10 @@ body {
   align-items: flex-end;
   justify-content: center;
   gap: 8px;
+}
+
+#nav > #navbuttons > #options {
+  cursor: pointer;
 }
 
 #nav > #navbuttons > #options > .optionslines {
@@ -98,7 +118,7 @@ body {
   height: 2px;
 }
 #optionsline2 {
-  width: 20px;
+  width: 18px;
   height: 1px;
 }
 #optionsline3 {
@@ -201,7 +221,7 @@ body {
   width: 100vw;
 }
 
-#page2 > #page2images > .page2image > img {
+#page2 > #page2images > .page2imageclass > img {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
@@ -234,4 +254,42 @@ body {
   height: 250px;
   width: 300px;
   /* background-color: red; */
+}
+
+#page3 {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-color: var(--page3white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+
+#page3 > #page3text > h2 {
+  text-transform: uppercase;
+  font-family: var(--kenjofont);
+}
+
+#page3 > #page3images {
+  position: relative;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#page3 > #page3images > .page3imageclass {
+  height: 60vh;
+  width: 14vw;
+  background-color: red;
+
+  overflow: hidden;
+}
+
+.page3imageclass > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
