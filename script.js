@@ -1,0 +1,10 @@
+function loco() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("#main"),
+      smooth: true,
+    });
+  });
+}
+
+loco();
