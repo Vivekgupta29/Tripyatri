@@ -14,20 +14,20 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
 }
 
 #main {
-  height: 100%;
+  position: relative;
   width: 100%;
 }
 
 #nav {
   height: 15vh;
   width: 100%;
-  background-color: orange;
+  /* background-color: orange; */
   position: fixed;
+  z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,13 +40,13 @@ body {
   align-items: center;
   gap: 1vw;
   width: 20%;
-  background-color: red;
 }
 
 #nav > #navlogo > #sitename {
   text-transform: uppercase;
   font-family: var(--kenjofont);
   font-size: 2vw;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -56,11 +56,11 @@ body {
   align-items: center;
   gap: 5vw;
   width: 49%;
-  background-color: purple;
 }
 
 #nav > #navlinks > a {
   font-family: var(--latofont);
+  font-weight: 900;
   text-decoration: none;
   color: #fff;
   font-size: 1vw;
@@ -71,12 +71,12 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: pink;
   gap: 3vw;
 }
 
-#nav > #navbuttons > #search > i {
-  color: #fff;
+#nav > #navbuttons > #search > svg {
+  fill: #fff;
+  height: 25px;
 }
 
 #nav > #navbuttons > #options {
@@ -88,11 +88,74 @@ body {
 }
 
 #nav > #navbuttons > #options > .optionslines {
-  width: 25px;
-  height: 2px;
-  background-color: white;
+  background-color: #fff;
 }
 
+#optionsline1 {
+  width: 25px;
+  height: 2px;
+}
 #optionsline2 {
-  width: 20px !important;
+  width: 20px;
+  height: 1px;
+}
+#optionsline3 {
+  width: 25px;
+  height: 2px;
+}
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#page1 > #page1overlay {
+  position: absolute;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.605);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page1 > #page1overlay > #page1button {
+  background-color: rgba(255, 255, 255, 0.103);
+  backdrop-filter: blur(60px);
+  padding: 1.9vh 2.5vh;
+  margin-top: 15vh;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#page1 > #page1overlay > h1 {
+  /* background-color: green; */
+  margin: 3vh 0vh;
+  color: #fff;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 100;
+  line-height: 1;
+}
+#page1 > #page1overlay > #page1circle {
+  background-color: purple;
+}
+
+#page1 > video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#page2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
