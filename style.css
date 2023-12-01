@@ -25,6 +25,17 @@ body {
   background-color: var(--apnagreen);
 }
 
+#main > #navslider {
+  height: 100vh;
+  width: 70vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.621);
+  z-index: 99999999;
+  backdrop-filter: blur(5px);
+}
+
 #nav {
   height: 15vh;
   width: 100%;
@@ -287,6 +298,7 @@ body {
 #page3 > #page3text > h2 {
   text-transform: uppercase;
   font-family: var(--kenjofont);
+  font-size: 6vw;
 }
 
 #page3 > #page3images {
