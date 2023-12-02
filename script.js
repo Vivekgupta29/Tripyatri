@@ -43,14 +43,32 @@ locoplusscrolltrigger();
 function gsapanimations() {
   const tl = gsap.timeline();
 
-  tl.from("#sitelogo", {
+  tl.from("#sitelogo,#sitename,#navlinks>a,#navbuttons>div", {
     y: -100,
-    duration: 1,
+    duration: 0.5,
+    opcaity: 0,
+    stagger: 0.1,
   });
-  tl.from("#sitename", {
-    x: -200,
-    duration: 1,
+
+  tl.from("#page1button,#page1overlay>h1", {
+    y: 100,
     opacity: 0,
+    duration: 0.5,
+    stagger: 0.2,
+  });
+  gsap.from("#page2images", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#page2images",
+      scroller: "#main",
+      start: "top 40%",
+      end: "top 80%",
+      scrub: 3,
+      markers: true,
+    },
   });
 }
 gsapanimations();
