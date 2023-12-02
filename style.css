@@ -30,7 +30,7 @@ body {
   width: 70vw;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   background-color: rgba(0, 0, 0, 0.621);
   z-index: 99999999;
   backdrop-filter: blur(5px);
@@ -49,25 +49,28 @@ body {
 }
 
 #nav > #navlogo {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1vw;
   width: 20%;
+  background-color: red;
 }
 
 #nav > #navlogo > #sitelogo {
   /* background-color: green; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
   width: 100%;
   height: 100%;
+  padding-right: 1vw;
+  border-right: 1px solid white;
+  back
 }
 
 #nav > #navlogo > #sitelogo > img {
   width: 50px;
   height: 50px;
+  right: 0;
 }
 
 #nav > #navlogo > #sitename {
