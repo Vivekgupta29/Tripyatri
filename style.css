@@ -34,6 +34,7 @@ body {
   background-color: rgba(0, 0, 0, 0.621);
   z-index: 99999999;
   backdrop-filter: blur(5px);
+  transform: translate(-50%, -50%);
 }
 
 #cursorball {
