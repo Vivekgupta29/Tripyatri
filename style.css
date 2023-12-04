@@ -36,6 +36,19 @@ body {
   backdrop-filter: blur(5px);
 }
 
+#cursorball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99999999999;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--page3white);
+  pointer-events: none;
+  /* background-blend-mode: var(--page3white); */
+}
+
 #nav {
   height: 15vh;
   width: 100%;

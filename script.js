@@ -46,7 +46,7 @@ function gsapanimations() {
   tl.from("#sitelogo,#sitename,#navlinks>a,#navbuttons>div", {
     y: -100,
     duration: 0.5,
-    opcaity: 0,
+    opacity: 0,
     stagger: 0.1,
   });
 
@@ -58,17 +58,42 @@ function gsapanimations() {
   });
   gsap.from("#page2images", {
     y: 100,
+    duration: 0.5,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#page2images > .page2imageclass",
+      scroller: "#main",
+      start: "top 90%",
+      end: "top 0%",
+      scrub: 3,
+      // markers: true,
+    },
+  });
+  gsap.from("#page3images > .page3imageclass", {
+    y: 100,
     opacity: 0,
     duration: 0.5,
     stagger: 0.5,
     scrollTrigger: {
-      trigger: "#page2images",
+      trigger: "#page3",
       scroller: "#main",
-      start: "top 40%",
-      end: "top 80%",
+      start: "top 80%",
+      end: "top 60%",
       scrub: 3,
-      markers: true,
+      // markers: true,
     },
   });
 }
 gsapanimations();
+
+function cursorBallAnimation() {
+  const cursorball = document.querySelector("#cursorball");
+
+  window.addEventListener("mousemove", function (event) {
+    cursorball.style.left = `${event.clientX}px`;
+    cursorball.style.top = `${event.clientY}px`;
+    console.log(event);
+  });
+}
+
+cursorBallAnimation();
