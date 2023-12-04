@@ -30,10 +30,38 @@ body {
   width: 70vw;
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0%;
   background-color: rgba(0, 0, 0, 0.621);
-  z-index: 99999999;
+  z-index: 999999;
   backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+
+#navslider > #navsliderheading {
+  height: 30%;
+  width: 100%;
+  color: #ffffffab;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navslider > #navlinks {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#navslider > #navlinks > a {
+  color: var(--page3white);
+  text-decoration: none;
+  font-size: 8vw;
+  font-weight: 900;
 }
 
 #cursorball {
@@ -52,7 +80,7 @@ body {
   width: 100%;
   /* background-color: orange; */
   position: fixed;
-  z-index: 9999999;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,9 +138,15 @@ body {
 #nav > #navbuttons {
   width: 20%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   gap: 3vw;
+  position: relative;
+  /* background-color: black; */
+}
+
+#nav > #navbuttons > #search {
+  position: relative;
 }
 
 #nav > #navbuttons > #search > svg {
@@ -122,18 +156,24 @@ body {
 }
 
 #nav > #navbuttons > #options {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav > #navbuttons > #options > #menubutton {
+  position: absolute;
+  z-index: 9999999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   gap: 8px;
-}
-
-#nav > #navbuttons > #options {
   cursor: pointer;
 }
 
-#nav > #navbuttons > #options > .optionslines {
+#navbuttons > #options > #menubutton > .optionslines {
   background-color: #fff;
 }
 
@@ -163,7 +203,7 @@ body {
 
 #page1 > #page1overlay {
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 50%, var(--apnagreen));
@@ -238,7 +278,7 @@ body {
   opacity: 1;
   color: #fff;
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
 }
 
 #page2 > #page2images {
