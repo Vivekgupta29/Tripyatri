@@ -40,6 +40,16 @@ function locoplusscrolltrigger() {
 
 locoplusscrolltrigger();
 
+function cursorBallAnimation() {
+  const cursorball = document.querySelector("#cursorball");
+
+  window.addEventListener("mousemove", function (event) {
+    cursorball.style.transform = `translate(${event.clientX}px,${event.clientY}px)`;
+  });
+}
+
+cursorBallAnimation();
+
 function gsapanimations() {
   const tl = gsap.timeline();
 
@@ -85,15 +95,3 @@ function gsapanimations() {
   });
 }
 gsapanimations();
-
-function cursorBallAnimation() {
-  const cursorball = document.querySelector("#cursorball");
-
-  window.addEventListener("mousemove", function (event) {
-    cursorball.style.left = `${event.clientX}px`;
-    cursorball.style.top = `${event.clientY}px`;
-    console.log(event);
-  });
-}
-
-// cursorBallAnimation();
