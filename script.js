@@ -96,4 +96,4 @@ function cursorBallAnimation() {
   });
 }
 
-cursorBallAnimation();
+// cursorBallAnimation();
