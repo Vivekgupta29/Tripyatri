@@ -40,16 +40,6 @@ function locoplusscrolltrigger() {
 
 locoplusscrolltrigger();
 
-function cursorBallAnimation() {
-  const cursorball = document.querySelector("#cursorball");
-
-  window.addEventListener("mousemove", function (event) {
-    cursorball.style.transform = `translate(${event.clientX}px,${event.clientY}px)`;
-  });
-}
-
-cursorBallAnimation();
-
 function gsapanimations() {
   const tl = gsap.timeline();
 
@@ -83,7 +73,10 @@ function gsapanimations() {
     y: 100,
     opacity: 0,
     duration: 0.5,
-    stagger: 0.5,
+    stagger: {
+      each: 0.5,
+      from: "end",
+    },
     scrollTrigger: {
       trigger: "#page3",
       scroller: "#main",
@@ -95,3 +88,15 @@ function gsapanimations() {
   });
 }
 gsapanimations();
+
+function cursorBallAnimation() {
+  const cursorball = document.querySelector("#cursorball");
+
+  window.addEventListener("mousemove", function (event) {
+    cursorball.style.transform = `translate3d(
+      calc(${event.clientX}px - 50%), 
+      calc(${event.clientY}px - 50%), 0px) scale(1)`;
+  });
+}
+
+cursorBallAnimation();
