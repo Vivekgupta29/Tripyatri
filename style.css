@@ -27,7 +27,7 @@ body {
 
 #main > #navslider {
   height: 100vh;
-  width: 70vw;
+  width: 100vw;
   position: absolute;
   top: 0;
   right: -100%;
@@ -46,6 +46,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#closebutton {
+  position: absolute;
+  width: 100%;
+  top: 5vh;
+  left: 85vw;
+}
+
+#closebutton > svg {
+  fill: #fff;
+  height: 50px;
+  cursor: pointer;
 }
 
 #navslider > #navlinks {

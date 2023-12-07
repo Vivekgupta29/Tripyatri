@@ -90,11 +90,11 @@ function gsapanimations() {
 gsapanimations();
 
 function cursorBallAnimation() {
-  const cursorball = document.querySelector("#cursorball");
-  const page3images = document.querySelector("#page3images");
-  const page3imageskaplace = page3images.getBoundingClientRect();
-  console.log(page3imageskaplace.top);
-  console.log(page3imageskaplace.left);
+  // const cursorball = document.querySelector("#cursorball");
+  // const page3images = document.querySelector("#page3images");
+  // const page3imageskaplace = page3images.getBoundingClientRect();
+  // console.log(page3imageskaplace.top);
+  // console.log(page3imageskaplace.left);
 
   window.addEventListener("mousemove", function (event) {
     cursorball.style.transform = `translate3d(
@@ -144,4 +144,23 @@ function imageHoverer() {
   });
 }
 
-imageHoverer();
+// imageHoverer();
+
+function openNavSlider() {
+  const navslider = document.querySelector("#navslider");
+  const menubutton = document.querySelector("#menubutton");
+
+  menubutton.addEventListener("click", function () {
+    gsap.to(navslider, {
+      right: 0,
+    });
+  });
+
+  const closebutton = document.querySelector("#closebutton");
+  closebutton.addEventListener("click", function () {
+    gsap.to(navslider, {
+      right: "-100%",
+    });
+  });
+}
+openNavSlider();
