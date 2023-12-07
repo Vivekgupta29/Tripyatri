@@ -391,3 +391,50 @@ body {
 #page3 > #page3images > .page3imageclass:hover img {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
+
+/* Contact Page Styling */
+
+#contactpage1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--apnagreen);
+}
+
+#contactbox {
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  height: 75vh;
+  width: 20vw;
+  background-color: var(--page3white);
+  color: black;
+}
+
+#contacttop {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contacttop > h1 {
+  font-size: 3vw;
+  font-family: var(--poppinsfont);
+}
+
+#contactbottom {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+#contactbottom > button {
+  padding: 1vh 2vw;
+  border-radius: 5px;
+}

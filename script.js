@@ -86,6 +86,12 @@ function gsapanimations() {
       // markers: true,
     },
   });
+
+  /*contact script*/
+  tl.from("#contactbox", {
+    top: "-100%",
+    opacity: 0,
+  });
 }
 gsapanimations();
 
