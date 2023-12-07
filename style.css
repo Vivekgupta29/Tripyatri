@@ -362,13 +362,11 @@ body {
   max-width: 80vw;
   display: flex;
   align-items: center;
-  gap: 5vw;
 }
 
 #page3 > #page3images > .page3imageclass {
   height: 60vh;
-  width: 14vw;
-  background-color: red;
+  width: 20vw;
 }
 
 .page3imageclass > img {

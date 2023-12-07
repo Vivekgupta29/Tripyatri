@@ -91,11 +91,15 @@ gsapanimations();
 
 function cursorBallAnimation() {
   const cursorball = document.querySelector("#cursorball");
+  const page3images = document.querySelector("#page3images");
+  const page3imageskaplace = page3images.getBoundingClientRect();
+  console.log(page3imageskaplace.top);
+  console.log(page3imageskaplace.left);
 
   window.addEventListener("mousemove", function (event) {
     cursorball.style.transform = `translate3d(
-      calc(${event.clientX}px - 50%), 
-      calc(${event.clientY}px - 50%), 0px)`;
+        calc(${event.clientX}px - 50%),
+        calc(${event.clientY}px - 50%), 0px)`;
   });
 }
 
@@ -106,36 +110,38 @@ function imageHoverer() {
   const page3images = document.querySelectorAll(".page3imageclass");
 
   page3images.forEach(function (image, index) {
-    image.addEventListener("mouseenter", function () {
-      const img = image.querySelector("img");
+    const img = image.querySelector("img");
 
-      cursorball.style.transform = `scale(2)`;
-
-      if (index > 0 && index < page3images.length - 1) {
-        img.style.transform = `scale(1.2)`;
-        page3images[index - 1].querySelector("img").style.transform =
-          "scale(1.1)";
-        page3images[index + 1].querySelector("img").style.transform =
-          "scale(1.1)";
-      }
-
-      if (index === 0) {
-        img.style.transform = `scale(1.2)`;
-        page3images[index + 1].querySelector("img").style.transform =
-          "scale(1.1)";
-      }
-
-      if (index === page3images.length - 1) {
-        img.style.transform = `scale(1.2)`;
-        page3images[index - 1].querySelector("img").style.transform =
-          "scale(1.1)";
-      }
+    const tl = gsap.timeline({
+      paused: true,
+      onComplete: function () {
+        cursorball.style.transform = "scale(2)";
+      },
+      onReverseComplete: function () {
+        cursorball.style.transform = "scale(1)";
+      },
     });
-    image.addEventListener("mouseleave", function () {
-      const img = image.querySelector("img");
 
-      img.style.transform = `scale(1)`;
+    tl.to(img, { scale: 1.2, duration: 0.3 })
+      .to(
+        page3images[index - 1]?.querySelector("img"),
+        { scale: 0.6, duration: 0.3 },
+        "<"
+      )
+      .to(
+        page3images[index + 1]?.querySelector("img"),
+        { scale: 0.6, duration: 0.3 },
+        "<"
+      );
+
+    image.addEventListener("mouseenter", function () {
+      tl.play();
+    });
+
+    image.addEventListener("mouseleave", function () {
+      tl.reverse();
     });
   });
 }
+
 imageHoverer();
